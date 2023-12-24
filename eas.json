@@ -19,6 +19,10 @@
     "preview4": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://www.bo.agarson.in"
+      }
+    }
   }
 }

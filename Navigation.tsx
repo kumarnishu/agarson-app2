@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen } from './HomeScreen';
-import { LoginScreen } from './LoginScreen';
+import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import VisitScreen from './screens/VisitScreen';
 
 
 export type PrivateParamList = {
-    Home: undefined
+    Home: undefined,
+    Visit:undefined
 }
 
 export type PublicParamList = {
@@ -21,7 +23,8 @@ export function PrivateStackNavigation() {
     return (
         <NavigationContainer >
             <PrivateStack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
-                <PrivateStack.Screen name="Home" component={HomeScreen} options={{ title: 'Home Page' }} />
+                <PrivateStack.Screen name="Home" component={HomeScreen}  />
+                <PrivateStack.Screen name="Visit" component={VisitScreen}  />
             </PrivateStack.Navigator>
         </NavigationContainer>
     )
