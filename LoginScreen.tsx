@@ -1,4 +1,5 @@
-import { Button, Text, View } from "react-native";
+import { View } from "react-native";
+import { Text, Button } from "react-native-paper";
 import { useCallback, useContext } from "react";
 import { UserContext } from "./contexts/UserContext";
 import * as SplashScreen from 'expo-splash-screen';
@@ -34,12 +35,14 @@ export function LoginScreen() {
     >
       <Text style={{ fontSize: 28, fontFamily: "Inter-Black" }}>Login Page</Text>
       <Button
-        title="Login"
+        mode="contained"
         onPress={() => {
           // @ts-ignore
           setUser({ username: "nishu kumar" })
         }}
-      />
+      >
+        Login
+      </Button>
     </View>
   );
 }
